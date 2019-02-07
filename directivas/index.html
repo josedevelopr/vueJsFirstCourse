@@ -15,10 +15,51 @@
         <img v-bind:src="imagen">    
 
         <!--  v-text -> permite mostrar como texto el valor que tiene una propiedad -->
-        <div v-text="texto">
-            
+        <div v-text="texto">            
         </div>
-
+        <!--  v-html -> permite mostrar codigo html -->
+        <div v-html="html">
+        </div>
+        <br>
+        <br>
+        <!--  v-if -> permite usar una condicional y de esta forma remover del DOM o no un elemento -->        
+        <template v-if='mostrar'>
+            <h3>Titulo</h3>
+            <p>parrafo</p>
+            Este es el primer div
+        </template>  
+        <div v-else>Este es el segundo div</div>  
+        <br>
+        <br>
+        <br>
+        <div v-if='parrafo==1'>Parrafo nro 1</div>
+        <div v-else-if='parrafo==2'>Parrafo nro 2</div>
+        <div v-else-if='parrafo==3'>Parrafo nro 3</div>
+        <div v-else>Parrafo no es 1,2 ni 3</div>
+        <br>
+        <br>
+        <!--  v-show -> solo oculta un elemento html, pero no lo remueve  -->        
+        <div v-show='mostrar'>Mostrando div 1</div>
+        <div >Mostrando div 2</div>
+        <br>
+        <br>
+        <!--  v-for-> permite hacer un loop de un determinado arreglo (parece foreach) -->        
+        <ul>
+            <li v-for='pais in paises'>{{pais.idioma}}</li>
+        </ul>
+        <ul>
+            <!--  v-for-> podemos usarlo tambien para los templates, ademas de poder ver el indice -->        
+           <template v-for='(pais,indice) in paises'>
+                <li >{{indice}}-{{pais.idioma}}</li>
+                <hr>
+           </template>                
+        </ul>
+        <br>
+        <br>
+        <ul>
+            <!--  v-for-> permite hacer un loop de un determinado arreglo (parece foreach) -->        
+            <li v-for='(valor,llave) in empleado'>{{llave}} -> {{valor}} </li>
+        </ul>
     </div>
 
     <script src="vue.js"></script>
