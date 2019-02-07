@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primera aplicacion</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    
+    <div id="vm">
+        <button v-on:click="primero++">Incrementar el primero</button>
+        <button v-on:click="segundo++">Incrementar el segundo</button>
+        <button v-on:click="tercero++">Incrementar el tercero</button>
+        <button v-on:click="cuarto++">Incrementar el cuarto</button>
+        <button v-on:click="quinto++">Incrementar el quinto</button>
+        <ul>
+            <li>primero :{{primero}}</li>
+            <li>segundo :{{segundo}}</li>
+            <li>tercero :{{tercero}}</li>
+            <li>cuarto :{{cuarto}}</li>
+            <li>quinto :{{quinto}}</li>
+            <li>suma :{{total}}</li>
+        </ul>
+    </div>
+
+    <script src="vue.js"></script>
+</body>
+</html>
