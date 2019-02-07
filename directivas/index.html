@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Primera aplicacion</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    
+    <div id="vm">    
+        <!--  v-bind -> directiva que nos permite enlazar una propiedad vue dentro de un elemento html  -->
+        <!--  hay dos formas de poder utilizarlo   "v-bind:elemnto" o ":elemento"  -->
+        <img v-bind:src="imagen">    
+
+        <!--  v-text -> permite mostrar como texto el valor que tiene una propiedad -->
+        <div v-text="texto">
+            
+        </div>
+
+    </div>
+
+    <script src="vue.js"></script>
+</body>
+</html>
