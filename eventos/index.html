@@ -17,6 +17,27 @@
       <button v-on:click='restarUno'>Restar uno</button>
       <hr>
       {{contador}}
+      <br>
+      <br>
+      <!-- Usando una funcion con parametros  -->
+      <button v-on:click='alerta("Esta es la alerta")'>Mostrar alerta</button>  
+      <br>
+      <br>
+      <br>
+      <div style="height:300px; border:1px #000 solid;" 
+      v-on:mousemove="mostrarUbicacion"
+      v-on:click.once="sumar(3)">         
+        <div style="height:30px;border:1px red solid;"
+        v-on:mousemove.stop></div>
+      </div>
+      x: {{x}} , y: {{y}} , contador : {{contador}}
+      <br>
+      <br>
+      <input type="text" v-on:keyup="sumar(1)">
+      <br>
+      <br>
+      <button @click="clickButton">Clickeame</button>
+      El boton tiene {{clicks}}
     </div>
 
     <script src="vue.js"></script>
