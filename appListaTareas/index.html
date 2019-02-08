@@ -23,18 +23,22 @@
     <h2>{{titulo}}</h2>   
     <br> 
       <div class="input-group">          
-          <input type="text" v-model="nuevaTarea" placeholder="Escribe una nueva tarea" class="form-control">     
+          <input type="text" v-model="nuevaTarea" v-on:keyup.enter='agregarTarea' placeholder="Escribe una nueva tarea" class="form-control">     
           <span class="input-group-btn">
             <button class="btn btn-primary" v-on:click='agregarTarea'>Agregar</button>
           </span>
       </div>
     <ul class="list-group">  
-        <li v-for='tarea in tareas' class="list-group-item" v-bind:class='{terminada: tarea.terminada}'>
+        <li v-for='(tarea,indice) in tareas' class="list-group-item" v-bind:class='{terminada: tarea.terminada}'>
             {{tarea.texto}} 
-            <span class="pull-right">
+            <span class="float-right ">
                 <button type="button" class="btn btn-success btn-xs" 
                     v-on:click='tarea.terminada =!tarea.terminada'>
                   Done
+                </button>
+                <button type="button" class="btn btn-danger btn-xs" 
+                    v-on:click='borrar(indice)'>
+                  Delete
                 </button>
             </span>
         </li>

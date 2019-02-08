@@ -33,6 +33,9 @@ var app = new Vue({
                 alert('Por favor escriba una tarea para agregar')
             }
             this.nuevaTarea = '';            
+        },
+        borrar:function(indice){
+            this.tareas.splice(indice,1);
         }
     }
 })
